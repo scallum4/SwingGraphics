@@ -1,27 +1,26 @@
-public class Shape{
+public class Shape extends DrawableObject{
     private int width;
     private int height;
     private int xPos;
     private int yPos;
     private int direction;
-    private int layer;
 
-    public Square(int width, int height, int xPos, int yPos){
+    public Shape(int width, int height, int xPos, int yPos, String colour){
+        super(colour);
         this.width = width;
         this.height = height;
         this.xPos = xPos;
         this.yPos = yPos;
         direction = 0;
-        layer = 0;
     }
 
-    public Square(int width, int height, int xPos, int yPos, int direction, int layer){
+    public Shape(int width, int height, int xPos, int yPos, String colour, int direction, int layer){
+        super(layer, colour);
         this.width = width;
         this.height = height;
         this.xPos = xPos;
         this.yPos = yPos;
         this.direction = direction;
-        this.layer = layer;
     }
 
     public int getWidth() {
@@ -44,10 +43,6 @@ public class Shape{
         return direction;
     }
 
-    public int getLayer() {
-        return layer;
-    }
-
     public void setWidth(int width) {
         this.width = width;
     }
@@ -68,7 +63,4 @@ public class Shape{
         this.direction = direction;
     }
 
-    public void setLayer(int layer) {
-        this.layer = layer;
-    }
 }
