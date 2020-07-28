@@ -1,26 +1,31 @@
 public class Shape extends DrawableObject{
     private int width;
     private int height;
-    private int xPos;
-    private int yPos;
-    private int direction;
+    private double xPos;
+    private double yPos;
+    private int angle;
 
-    public Shape(int width, int height, int xPos, int yPos, String colour){
+    public Shape(int width, int height, double xPos, double yPos, String colour){
         super(colour);
         this.width = width;
         this.height = height;
         this.xPos = xPos;
         this.yPos = yPos;
-        direction = 0;
+        angle = 0;
     }
 
-    public Shape(int width, int height, int xPos, int yPos, String colour, int direction, int layer){
+    public Shape(int width, int height, double xPos, double yPos, String colour, int angle, int layer){
         super(layer, colour);
         this.width = width;
         this.height = height;
         this.xPos = xPos;
         this.yPos = yPos;
-        this.direction = direction;
+        this.angle = angle;
+    }
+
+    public void move(double xPos, double yPos){
+        this.xPos = xPos;
+        this.yPos = yPos;
     }
 
     public int getWidth() {
@@ -31,16 +36,16 @@ public class Shape extends DrawableObject{
         return height;
     }
 
-    public int getxPos() {
+    public double getxPos() {
         return xPos;
     }
 
-    public int getyPos() {
+    public double getyPos() {
         return yPos;
     }
 
-    public int getDirection() {
-        return direction;
+    public int getAngle() {
+        return angle;
     }
 
     public void setWidth(int width) {
@@ -51,16 +56,16 @@ public class Shape extends DrawableObject{
         this.height = height;
     }
 
-    public void setxPos(int xPos) {
+    public void setxPos(double xPos) {
         this.xPos = xPos;
     }
 
-    public void setyPos(int yPos) {
+    public void setyPos(double yPos) {
         this.yPos = yPos;
     }
 
-    public void setDirection(int direction) {
-        this.direction = direction;
+    public void setAngle(int angle) {
+        this.angle = angle;
     }
 
 }

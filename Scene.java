@@ -2,7 +2,7 @@ import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
 import java.awt.Color;
-import java.awt.Rectangle;
+import java.awt.geom.Rectangle2D;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.BasicStroke;
@@ -38,7 +38,7 @@ public class Scene extends JPanel implements Runnable{
                 if(ob instanceof Square){
                     Square s = (Square) ob;
                     graphics.setColor(s.getColour());
-                    Rectangle r = new Rectangle(s.getxPos(), s.getyPos(), s.getWidth(), s.getHeight());
+                    Rectangle2D.Double r = new Rectangle2D.Double(s.getxPos(), s.getyPos(), s.getWidth(), s.getHeight());
                     if(s.getAngle() != 0) {
                         graphics.rotate(Math.toRadians(s.getAngle()), (s.getWidth() / 2) + s.getxPos(), (s.getHeight() / 2) + s.getyPos());
                         graphics.fill(r);
