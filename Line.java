@@ -1,3 +1,5 @@
+package SwingGraphics;
+
 public class Line extends DrawableObject{
     private int startX;
     private int startY;

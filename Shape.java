@@ -1,3 +1,5 @@
+package SwingGraphics;
+
 public class Shape extends DrawableObject{
     private int width;
     private int height;
