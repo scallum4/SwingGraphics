@@ -1,5 +1,5 @@
 /**
- * Models a simpple circle/ ellipse.
+ * Models a simple circle/ ellipse.
  * This class represents a circle and can be drawn to the Scene class.
  */
 package SwingGraphics;
@@ -7,7 +7,7 @@ package SwingGraphics;
 public class Circle extends Shape{
 
     /**
-	 * Constructor. Creates a Ball with the given parameters.
+	 * Constructor. Creates a Circle with the given parameters.
      * @param width The width of the circle in pixels. 
      * @param height The height of the circle in pixels. 
      * @param xPos The x position of the circle in pixels (TOP LEFT of circle). 
@@ -19,7 +19,7 @@ public class Circle extends Shape{
     }
 
     /**
-	 * Constructor. Creates a Ball with the given parameters.
+	 * Constructor. Creates a Circle with the given parameters.
      * @param width The width of the circle in pixels. 
      * @param height The height of the circle in pixels. 
      * @param xPos The x position of the circle in pixels (TOP LEFT of circle). 
