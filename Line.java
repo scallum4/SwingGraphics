@@ -1,9 +1,8 @@
+package SwingGraphics;
 /**
  * Models a simple line.
  * This class represents a line and can be drawn to the Scene class.
  */
-package SwingGraphics;
-
 public class Line extends DrawableObject{
 
 

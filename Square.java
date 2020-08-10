@@ -1,9 +1,8 @@
+package SwingGraphics;
 /**
  * Models a simple square/ rectangle.
  * This class represents a square and can be drawn to the Scene class.
  */
-package SwingGraphics;
-
 public class Square extends Shape{
 
     /**

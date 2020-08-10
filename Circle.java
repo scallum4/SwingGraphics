@@ -1,9 +1,8 @@
+package SwingGraphics;
 /**
  * Models a simple circle/ ellipse.
  * This class represents a circle and can be drawn to the Scene class.
  */
-package SwingGraphics;
-
 public class Circle extends Shape{
 
     /**
