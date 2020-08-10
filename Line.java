@@ -5,7 +5,6 @@ package SwingGraphics;
  */
 public class Line extends DrawableObject{
 
-
     private int startX;   // The x coordinate of the start of the line.
     private int startY;   // The y coordinate of the start of the line.
     private int endX;     // The x coordinate of the end of the line.
@@ -37,7 +36,7 @@ public class Line extends DrawableObject{
      * @param endY The y coordinate of the end of the line.
      * @param width The width/ stroke of the line.
      * @param layer The layer that the line will be drawn at (used to determine what objects will be drawn above what other objects if they are overlapping).
-     * @param colour The colour of the line (Available colour are: BLACK, BLUE, CYAN, DARKGREY, GREY, GREEN, LIGHTGREY, MAGENTA, ORANGE, PINK, RED, WHITE, YELLOW).
+     * @param colour The colour of the line (Available colours are: BLACK, BLUE, CYAN, DARKGREY, GREY, GREEN, LIGHTGREY, MAGENTA, ORANGE, PINK, RED, WHITE, YELLOW).
      */
     public Line(int startX, int startY, int endX, int endY, int width, int layer, String colour){
         super(layer, colour);

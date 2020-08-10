@@ -1,5 +1,4 @@
 package SwingGraphics;
-
 import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -9,28 +8,38 @@ import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.BasicStroke;
 import java.util.ArrayList;
-
+/**
+ * Creates a JPanel that the graphics can be displayed on. 
+ */
 public class Scene extends JPanel implements Runnable{
     private ArrayList<DrawableObject> items = new ArrayList<DrawableObject>();
 
+    /**
+     * Constructor. Creates a new Scene.
+     */
     public Scene(){
-        //System.out.println("Current thread");
         Thread t = new Thread(this);
         t.start();
     }
 
+    /**
+     * Called by the constructor to repaint each frame.
+     * Should only be called by the contructor, not by the user. 
+     */
     public void run(){
         while(true) {
             try {
-                //System.out.println("New thread");
                 this.repaint();
                 Thread.sleep(10);
-            } catch (InterruptedException iex) {
-            }
+            } catch (InterruptedException iex) {}
         }
     }
 
-    public void paintComponent(Graphics g) {
+    /**
+     * Called by the operating system to repaint each frame.
+     * Do not call this method. 
+     */
+    public void paintComponent(Graphics g){
         synchronized (this){
             Graphics2D graphics = (Graphics2D)g;
             graphics.clearRect(0, 0, this.getWidth(), this.getHeight());
@@ -69,6 +78,10 @@ public class Scene extends JPanel implements Runnable{
         }
     }
 
+    /**
+     * Used too add an item that will be drawn to the screen. 
+     * @param object The object that will be added. 
+     */
     public void addElement(DrawableObject object){
         int layer = object.getLayer();
 
@@ -82,6 +95,10 @@ public class Scene extends JPanel implements Runnable{
         items.add(object);
     }
 
+    /**
+     * Used too remove an item and stop it from being drawn to the screen. 
+     * @param object The object that will be removed. 
+     */
     public void removeElement(DrawableObject object){
         items.remove(object);
     }
