@@ -39,7 +39,7 @@ public class Shape extends DrawableObject{
      * @param layer The layer that the shape will be drawn at (used to determine what objects will be drawn above what other objects if they are overlapping).
      */
     public Shape(int width, int height, double xPos, double yPos, String colour, int angle, int layer){
-        super(layer, colour);
+        super(colour, layer);
         this.width = width;
         this.height = height;
         this.xPos = xPos;

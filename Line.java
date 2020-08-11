@@ -39,7 +39,7 @@ public class Line extends DrawableObject{
      * @param colour The colour of the line (Available colours are: BLACK, BLUE, CYAN, DARKGREY, GREY, GREEN, LIGHTGREY, MAGENTA, ORANGE, PINK, RED, WHITE, YELLOW).
      */
     public Line(int startX, int startY, int endX, int endY, int width, int layer, String colour){
-        super(layer, colour);
+        super(colour, layer);
         this.startX = startX;
         this.startY = startY;
         this.endX = endX;
