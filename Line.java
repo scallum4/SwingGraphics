@@ -18,9 +18,10 @@ public class Line extends DrawableObject{
      * @param endX The x coordinate of the end of the line.
      * @param endY The y coordinate of the end of the line.
      * @param width The width/ stroke of the line.
-     * */
-    public Line(int startX, int startY, int endX, int endY, int width){
-        super();
+     * @param colour The colour of the line (Available colours are: BLACK, BLUE, CYAN, DARKGREY, GREY, GREEN, LIGHTGREY, MAGENTA, ORANGE, PINK, RED, WHITE, YELLOW).
+     */
+    public Line(int startX, int startY, int endX, int endY, int width, String colour){
+        super(colour);
         this.startX = startX;
         this.startY = startY;
         this.endX = endX;
@@ -35,10 +36,10 @@ public class Line extends DrawableObject{
      * @param endX The x coordinate of the end of the line.
      * @param endY The y coordinate of the end of the line.
      * @param width The width/ stroke of the line.
-     * @param layer The layer that the line will be drawn at (used to determine what objects will be drawn above what other objects if they are overlapping).
      * @param colour The colour of the line (Available colours are: BLACK, BLUE, CYAN, DARKGREY, GREY, GREEN, LIGHTGREY, MAGENTA, ORANGE, PINK, RED, WHITE, YELLOW).
+     * @param layer The layer that the line will be drawn at (used to determine what objects will be drawn above what other objects if they are overlapping).
      */
-    public Line(int startX, int startY, int endX, int endY, int width, int layer, String colour){
+    public Line(int startX, int startY, int endX, int endY, int width, String colour, int layer){
         super(colour, layer);
         this.startX = startX;
         this.startY = startY;

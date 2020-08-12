@@ -35,10 +35,28 @@ public class Shape extends DrawableObject{
      * @param xPos The x position of the shape in pixels (TOP LEFT of shape). 
      * @param yPos The y position of the shape in pixels (TOP LEFT of shape). 
      * @param colour The colour of the shape (Available colours are: BLACK, BLUE, CYAN, DARKGREY, GREY, GREEN, LIGHTGREY, MAGENTA, ORANGE, PINK, RED, WHITE, YELLOW).
-     * @param angle The angle in degrees at which the shape will be drawn (For example if set to 90 the shape will be rotated 90 degrees clockwise).
      * @param layer The layer that the shape will be drawn at (used to determine what objects will be drawn above what other objects if they are overlapping).
      */
-    public Shape(int width, int height, double xPos, double yPos, String colour, int angle, int layer){
+    public Shape(int width, int height, double xPos, double yPos, String colour, int layer){
+        super(colour, layer);
+        this.width = width;
+        this.height = height;
+        this.xPos = xPos;
+        this.yPos = yPos;
+        angle = 0;
+    }
+
+    /**
+	 * Constructor. Creates a Shape with the given parameters.
+     * @param width The width of the shape in pixels. 
+     * @param height The height of the shape in pixels. 
+     * @param xPos The x position of the shape in pixels (TOP LEFT of shape). 
+     * @param yPos The y position of the shape in pixels (TOP LEFT of shape). 
+     * @param colour The colour of the shape (Available colours are: BLACK, BLUE, CYAN, DARKGREY, GREY, GREEN, LIGHTGREY, MAGENTA, ORANGE, PINK, RED, WHITE, YELLOW).
+     * @param layer The layer that the shape will be drawn at (used to determine what objects will be drawn above what other objects if they are overlapping).
+     * @param angle The angle in degrees at which the shape will be drawn (For example if set to 90 the shape will be rotated 90 degrees clockwise).
+     */
+    public Shape(int width, int height, double xPos, double yPos, String colour, int layer, int angle){
         super(colour, layer);
         this.width = width;
         this.height = height;
