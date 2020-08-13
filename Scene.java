@@ -178,4 +178,11 @@ public class Scene extends JPanel implements Runnable{
     public void setBackgroundColour(String backgroundColour){
         this.backgroundColour = backgroundColour;
     }
+
+    /**
+     * Clears all the items from the screen. 
+     */
+    public void clearScene(){
+        items.clear();
+    }
 }
