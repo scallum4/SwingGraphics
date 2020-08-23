@@ -1,4 +1,4 @@
-package SwingGraphics;
+package swinggraphics;
 /**
  * Models a simple line.
  * This class represents a line and can be drawn to the Scene class.

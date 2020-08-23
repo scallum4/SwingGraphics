@@ -1,4 +1,4 @@
-package SwingGraphics;
+package swinggraphics;
 /**
  * Models a simple square/ rectangle.
  * This class represents a square and can be drawn to the Scene class.

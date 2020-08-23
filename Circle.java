@@ -1,4 +1,4 @@
-package SwingGraphics;
+package swinggraphics;
 /**
  * Models a simple circle/ ellipse.
  * This class represents a circle and can be drawn to the Scene class.

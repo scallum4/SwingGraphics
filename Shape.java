@@ -1,4 +1,4 @@
-package SwingGraphics;
+package swinggraphics;
 /**
  * Used to model a shape.
  * You should not need to create an instance of this class.

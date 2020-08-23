@@ -1,4 +1,4 @@
-package SwingGraphics;
+package swinggraphics;
 import javax.swing.JPanel;
 import java.awt.Graphics;
 import java.awt.Graphics2D;
@@ -7,6 +7,7 @@ import java.awt.geom.Rectangle2D;
 import java.awt.geom.Ellipse2D;
 import java.awt.geom.Line2D;
 import java.awt.BasicStroke;
+import java.awt.Font;
 import java.util.ArrayList;
 import java.util.HashMap;
 /**
@@ -112,6 +113,11 @@ public class Scene extends JPanel implements Runnable{
                     graphics.setColor(stringToColor(l.getColour()));
                     graphics.setStroke(new BasicStroke((float)l.getWidth()));
                     graphics.draw(new Line2D.Double(l.getStartX(),l.getStartY(),l.getEndX(),l.getEndY()));
+                } else if(ob instanceof Text){
+                    Text t = (Text) ob;
+                    graphics.setFont(new Font("Helvetica", Font.BOLD, t.getTextSize()));
+                    graphics.setColor(stringToColor(t.getColour()));
+                    graphics.drawString(t.getText(),(float)t.getXPos(), (float)t.getYPos());
                 }
             }
         }

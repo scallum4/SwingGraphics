@@ -1,4 +1,4 @@
-package SwingGraphics;
+package swinggraphics;
 import java.awt.Color;
 import java.util.HashMap;
 /**
